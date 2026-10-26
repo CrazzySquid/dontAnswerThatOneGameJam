@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://drlxy7rdfar25"]
+
+[ext_resource type="Script" uid="uid://cstyagn7n7wtn" path="res://scenes/ui/menus/start_menu.gd" id="1_omacp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rs1r3"]
+font_size = 50
+
+[node name="StartMenu" type="Control" unique_id=2040116996]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_omacp")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1330556962]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.2, 0.58431375, 0.3882353, 1)
+
+[node name="Header" type="Label" parent="." unique_id=495599072]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -53.0
+offset_right = 53.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Forest Game?"
+label_settings = SubResource("LabelSettings_rs1r3")
+
+[node name="Buttons" type="VBoxContainer" parent="." unique_id=148773652]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -35.0
+offset_top = -68.0
+offset_right = 35.0
+offset_bottom = 68.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StartBtn" type="Button" parent="Buttons" unique_id=269223771]
+layout_mode = 2
+text = "Start"
+
+[node name="OptionsBtn" type="Button" parent="Buttons" unique_id=2104447565]
+layout_mode = 2
+text = "Options"
+
+[node name="CreditsBtn" type="Button" parent="Buttons" unique_id=1287956894]
+layout_mode = 2
+text = "Credits"
+
+[node name="QuitBtn" type="Button" parent="Buttons" unique_id=484780049]
+layout_mode = 2
+text = "Quit
+"
+
+[connection signal="pressed" from="Buttons/StartBtn" to="." method="_on_start_btn_pressed"]
